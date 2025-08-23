@@ -1,0 +1,31 @@
+[project]
+name = "prisoner"
+version = "0.1.0"
+description = "An evolutionary simulation of the Prisoner's Dilemma."
+authors = [
+    {name = "Mark London",email = "marklondon75@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib (>=3.10.5,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.10"
+
+# Set the maximum line length
+[tool.ruff]
+line-length = 122
+
+[tool.ruff.lint]
+# Select a good, standard set of rules to enforce.
+# "E" and "F" are the standard pycodestyle/pyflakes rules.
+# "B" is flake8-bugbear, which finds likely bugs.
+# "I" is isort, which automatically sorts your imports.
+select = ["E", "F", "B", "I"]
